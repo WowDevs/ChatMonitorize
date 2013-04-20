@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: Chat Monitorize
+## Author: FeDeHaCkEr
+## Version: 1.0
+## Notes: Monitoriza el chat en busca de los mensajes que quieras recibir (/cm <palabra> para añadir y quitar palabras)
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: ChatMonitorize_List
+ChatMonitorize.lua
