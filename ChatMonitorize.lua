@@ -3,8 +3,8 @@ function ChatMonitorize_Handler(self,event,...)
 		for i = 1, #ChatMonitorize_List do
 			if ChatMonitorize_List[i] and string.find(_arg1,ChatMonitorize_List[i]) then
 				UIErrorsFrame:Clear()
-				UIErrorsFrame:AddMessage("Chat Monitorize Found: |cff00beff"..ChatMonitorize_List[i].."|r\rfrom \124cff00ff00"..arg2.."|r\r"..arg1.."")
-				print("Chat Monitorize Found: |cff00beff"..ChatMonitorize_List[i].."|r from \124cff00ff00"..arg2.."|r\n"..arg1.."")
+				UIErrorsFrame:AddMessage("Chat Monitorize Found: |cff00beff"..ChatMonitorize_List[i].."|r\rfrom |cff00ff00"..arg2.."|r\r"..arg1.."")
+				print("Chat Monitorize Found: |cff00beff"..ChatMonitorize_List[i].."|r from |cff00ff00|Hplayer:"..arg2.."|h["..arg2.."]|h|r\n"..arg1.."")
 			end
 		end
 end
