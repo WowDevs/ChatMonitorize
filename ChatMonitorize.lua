@@ -1,10 +1,10 @@
 function ChatMonitorize_Handler(self,event,...)
-	 arg1 = string.lower(arg1)
+	 _arg1 = string.lower(arg1)
 		for i = 1, #ChatMonitorize_List do
-			if ChatMonitorize_List[i] and string.find(string.lower(arg1),ChatMonitorize_List[i]) then
+			if ChatMonitorize_List[i] and string.find(_arg1,ChatMonitorize_List[i]) then
 				UIErrorsFrame:Clear()
-				UIErrorsFrame:AddMessage("Chat Monitorize Found: |cff00beff"..ChatMonitorize_List[i].."|r\rfrom \124cff00ff00"..arg2.."|r\r("..arg1..")")
-				print("Chat Monitorize Found: |cff00beff"..ChatMonitorize_List[i].."|r from \124cff00ff00"..arg2.."|r\n("..arg1..")")
+				UIErrorsFrame:AddMessage("Chat Monitorize Found: |cff00beff"..ChatMonitorize_List[i].."|r\rfrom \124cff00ff00"..arg2.."|r\r"..arg1.."")
+				print("Chat Monitorize Found: |cff00beff"..ChatMonitorize_List[i].."|r from \124cff00ff00"..arg2.."|r\n"..arg1.."")
 			end
 		end
 end
@@ -40,11 +40,11 @@ function MonitorizeWord(arg)
 		return
 	end
 
-	local arg = string.lower(arg)
+	local _arg = string.lower(arg)
 	local found = false
 	local index = 1
 	for i = 1, #ChatMonitorize_List do
-		if ChatMonitorize_List[i] and string.find(arg,ChatMonitorize_List[i]) then
+		if ChatMonitorize_List[i] and string.find(_arg,ChatMonitorize_List[i]) then
 			found = true
 			index = i
 			break
@@ -55,7 +55,7 @@ function MonitorizeWord(arg)
 		ChatMonitorize_List[index] = nil
 		print("ChatMonitorize: "..arg.." |cffff0000borrada.")
 	else
-		ChatMonitorize_List[#ChatMonitorize_List+1] = arg
+		ChatMonitorize_List[#ChatMonitorize_List+1] = _arg
 		print("ChatMonitorize: "..arg.." |cff00ff00agregada.")
 	end
 end
