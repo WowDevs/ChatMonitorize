@@ -16,7 +16,7 @@ function MonitorizeWord_DelAll()
 end
 
 function ChatMonitorize_Help()
-	print("Chat Monitorize Help: Write /cm <word> to monitorize the chat searching this word.");
+	print("Chat Monitorize Help: \nWrite /cm <word> to monitorize the chat searching this word.\nWrite /cmdel do delete all the words tracked.");
 end
 
 function ChatMonitorize_GetList()
